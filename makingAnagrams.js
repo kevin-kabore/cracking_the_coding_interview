@@ -62,14 +62,16 @@ function main() {
     var b = readLine().split('');
 
     let count = a.length + b.length;
-    let pair = 0;
+    let pairs = 0;
     for (var i = 0; i < a.length; i++) {
         for (var j = 0; j < b.length; j++) {
             if (a[i] === b[j]) {
                b.splice(j,1);
-               pair++;
+               pairs++;
+               break;
             }
         }
     }
-    console.log(count - (pair*2))
+    console.log(count - (pairs*2))
+
 }
